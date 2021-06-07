@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/restaurant_logo"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/newRestaurant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/newRestaurant"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onNew"
+        android:text="@string/add_a_new_place"
+        app:layout_constraintBottom_toTopOf="@id/show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:onClick="onShow"
+        android:text="@string/show_all_on_map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newRestaurant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Restaurant</string>
+    <string name="Auth">AIzaSyBAjnVtCy9nB7V7XuKCxks8HQ-WIjy63nM</string>
+    <string name="restaurant_logo">Restaurant Logo</string>
+    <string name="add_a_new_place">Add A NEW PLACE</string>
+    <string name="show_all_on_map">SHOW ALL ON MAP</string>
+    <string name="place_name">PLACE NAME</string>
+    <string name="location">LOCATION</string>
+    <string name="get_current_location">GET CURRENT LOCATION</string>
+    <string name="show_on_map">SHOW ON MAP</string>
+    <string name="save">SAVE</string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewActivity">
+
+    <androidx.fragment.app.FragmentContainerView android:id="@+id/autocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/place_name"
+        android:hint="@string/place_name"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/autocomplete"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/location"
+        android:hint="@string/location"
+        android:inputType="textPostalAddress"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/current"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/current"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCurrent"
+        android:text="@string/get_current_location"
+        app:layout_constraintBottom_toTopOf="@id/show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:onClick="onShow"
+        android:text="@string/show_on_map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/save"
+        android:onClick="onSave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
